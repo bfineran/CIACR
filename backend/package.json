@@ -1,0 +1,14 @@
+{
+  "name": "docfinder",
+  "version": "1.0.0",
+  "description": "Serves relevant declassified cia documents for a given article",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && "
+  },
+  "author": "Ben Fineran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
