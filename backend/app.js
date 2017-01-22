@@ -39,18 +39,22 @@ app.post('/getdocs', function (req, res) {
 
   process.stdout.on('data', function(data) {
     console.log('FINISHED')
-    var str = data.toString(), lines = str.split(/(\r?\n)/g)
-    var keywords = str.split(', ')
+    var rawdata = data.toString()
+    var keywords = rawdata.split(', ')
     var matches = []
-    for (keyword in keywords) {
+    for (var i = 0; i < keywords.length; i++) {
+      var keyword = keywords[i]
       if (keyword in featuredict) {
-        for (pdf in featuredict[keyword]) {
-          console.log(keyword)
-          matches.push(pdf)
+        for (var j = 0; j < featuredict[keyword].length; j++) {
+          matches.push(featuredict[keyword][j])
+          if (matches.length >= 3) {
+            res.send(matches)
+            return
+          }
         }
       }
     }
-    //console.log(JSON.stringify(matches))
+    console.log(JSON.stringify(featuredict['attorney gen  eral']))
     res.send(matches)
   })
 })
