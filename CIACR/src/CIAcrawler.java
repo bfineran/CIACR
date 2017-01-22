@@ -27,6 +27,7 @@ public class CIAcrawler {
 		FileWriter f = new FileWriter("DocPDFLinks.txt");
 		BufferedWriter b = new BufferedWriter(f);
 
+		//895
 		for (int i = 1; i <= 38438; i++) {
 			scrapePage(i, b);
 			System.out.println(i);
