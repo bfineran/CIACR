@@ -23,7 +23,7 @@ for doc in corpus:
 possible_features = []
 
 for word in frequencies:
-	if frequencies[word] > 3:
+	if frequencies[word] > 2:
 		possible_features.append(word)
 
 i = 0
