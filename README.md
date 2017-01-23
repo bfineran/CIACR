@@ -7,7 +7,11 @@ We aim to scrape and analyze these files.  We want to show the public informatio
 
 ## Product
   We created a chrome extension that will provide links to pdf of declassified CIA documents to relevant articles as needed by the user.
-  
+
+## Usage
+  After cloning, open chrome and enable developer mode for extensions.  Upload our extension from the /chrome_extension/inject-sidebar-master and run it.  Next in terminal, navigate to the /backend folder and run $node app.js
+  Now you're good to go.  Go to any wikipedia page and click on our extension to see a list of up to 3 relevant newly declassified CIA documents.
+
 ## Development
 
 ### 1) Web Crawler
